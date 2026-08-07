@@ -13,7 +13,9 @@
         <div class="logo">BU.</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -21,31 +23,52 @@
     <!-- HERO SECTION -->
     <header class="hero">
         <div class="hero-content fade-in">
-            <p class="greeting">Hello, my name is</p>
+            <p class="greeting">Objective: Bridging Engineering & Digital Solutions</p>
             <h1><span class="highlight">Billy Ubil.</span></h1>
-            <h2>Mechanical Engineer & UI Developer.</h2>
-            <p>I bridge the gap between physical machinery and digital interfaces. Currently studying at Universiti Teknologi Malaysia (UTM).</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <h2>Mechanical Engineer & Web UI Developer.</h2>
+            <p>Showcasing my technical projects, hands-on fabrication experience, and digital development credentials. Currently advancing my mechanical engineering studies at Universiti Teknologi Malaysia (UTM).</p>
+            <a href="#projects" class="btn">View Portfolio</a>
         </div>
     </header>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT & SKILLS SECTION -->
     <section id="about" class="about-section fade-in">
-        <h2>About Me</h2>
+        <div class="section-header">
+            <h2>About & Expertise</h2>
+            <p class="subtitle">A blend of core mechanical theory, fabrication, and front-end programming.</p>
+        </div>
+        
         <div class="about-grid">
             <div class="about-text">
-                <p>Originally from Sabah, I hold a Diploma in Mechanical Engineering from Politeknik Kota Kinabalu and am currently advancing my studies at UTM. I specialize in applying core engineering principles—like thermodynamics and fluid mechanics—to interactive digital environments.</p>
-                <p>I am highly focused on optimizing processes and building technical solutions, with a strong career interest in the competitive oil & gas industry and the logistics sector.</p>
+                <p>Originally from Sabah, I hold a Diploma in Mechanical Engineering from Politeknik Kota Kinabalu. My objective is to optimize industrial processes by combining traditional mechanical principles with modern digital interfaces.</p>
+                <p>I have a strong career interest in the oil & gas industry and the logistics sector. Beyond the classroom, I actively build web-based dashboards and develop my hands-on fabrication proficiencies.</p>
             </div>
-            <div class="skills-box">
-                <h3>Core Skills</h3>
-                <div class="skill-tags">
-                    <span>Thermodynamics</span>
-                    <span>Fluid Mechanics</span>
-                    <span>HTML / CSS</span>
-                    <span>JavaScript Logic</span>
-                    <span>HMI / SCADA UI</span>
-                    <span>E-commerce Logistics</span>
+            
+            <!-- NEW CATEGORIZED SKILLS -->
+            <div class="skills-box" id="skills">
+                <div class="skill-category">
+                    <h3>Digital & Web Development</h3>
+                    <div class="skill-tags">
+                        <span>Web UI Development</span>
+                        <span>HTML / CSS</span>
+                        <span>JavaScript Logic</span>
+                        <span>HMI / SCADA UI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Engineering & Fabrication</h3>
+                    <div class="skill-tags">
+                        <span>Welding (TIG, SMAW, MIG)</span>
+                        <span>Thermodynamics</span>
+                        <span>Fluid Mechanics</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Software & Tools</h3>
+                    <div class="skill-tags">
+                        <span>Microsoft Excel</span>
+                        <span>E-commerce Logistics</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,7 +76,10 @@
 
     <!-- PROJECTS SECTION -->
     <section id="projects" class="projects-section">
-        <h2>Technical Projects</h2>
+        <div class="section-header fade-in">
+            <h2>Technical Projects</h2>
+            <p class="subtitle">Applying theory into interactive and operational solutions.</p>
+        </div>
         <div class="project-grid">
             
             <div class="project-card fade-in">
@@ -83,25 +109,61 @@
         </div>
     </section>
 
+    <!-- CERTIFICATES SECTION (Clickable Images) -->
+    <section id="certificates" class="cert-section">
+        <div class="section-header fade-in">
+            <h2>Certifications & Credentials</h2>
+            <p class="subtitle">Click on any credential to view the document.</p>
+        </div>
+        
+        <div class="cert-grid">
+            <!-- To add a real image, change 'placeholder1.jpg' to your actual image file name -->
+            <div class="cert-card fade-in" onclick="openModal('placeholder1.jpg', 'Diploma in Mechanical Engineering')">
+                <div class="cert-icon">🎓</div>
+                <h3>Diploma in Mechanical Engineering</h3>
+                <p>Politeknik Kota Kinabalu</p>
+                <span class="view-text">Click to view image</span>
+            </div>
+
+            <div class="cert-card fade-in" onclick="openModal('placeholder2.jpg', 'Web UI Development')">
+                <div class="cert-icon">💻</div>
+                <h3>Web UI Development</h3>
+                <p>Independent Portfolio Work</p>
+                <span class="view-text">Click to view image</span>
+            </div>
+            
+            <div class="cert-card fade-in" onclick="openModal('placeholder3.jpg', 'Welding Proficiency Showcase')">
+                <div class="cert-icon">🔥</div>
+                <h3>Practical Welding (TIG, SMAW, MIG)</h3>
+                <p>Workshop Proficiency (Image Showcase)</p>
+                <span class="view-text">Click to view image</span>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section fade-in">
-        <h2>Let's Connect</h2>
-        <p>I am actively seeking internships and career opportunities in engineering and technical development. Feel free to reach out or review my full credentials.</p>
+        <h2>Professional Inquiries</h2>
+        <p>I am open to exploring professional opportunities, internships, and technical collaborations. Please feel free to review my full resume or reach out directly.</p>
         
         <div class="contact-buttons">
-        
-            <a href="mailto:billyubil2112@gmail.com" class="btn email-btn">✉️ Email Me</a>
-            <a href="https://www.linkedin.com/in/billy-ubil-2442a9233" target="_blank" class="btn linkedin-btn">🔗 LinkedIn</a>
-            
-            <a href="resume.pdf" download="Billy_Ubil_Resume.pdf" class="btn outline resume-btn">📄 Download Resume</a>
+            <a href="mailto:billyubil2112@gmail.com" class="btn email-btn">✉️ billyubil2112@gmail.com</a>
+            <a href="https://www.linkedin.com/in/billy-ubil-2442a9233" target="_blank" class="btn linkedin-btn">🔗 Connect on LinkedIn</a>
+            <a href="resume.pdf" download="Billy_Ubil_Resume.pdf" class="btn outline resume-btn">📄 Download Resume PDF</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Billy Ubil. Built from scratch with HTML, CSS & JS.</p>
+        <p>© 2026 Billy Ubil. Engineered with pure HTML, CSS & JavaScript.</p>
     </footer>
+
+    <!-- THE IMAGE MODAL (Hidden by default, triggered by JS) -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="expandedImg">
+        <div id="modalCaption"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
- 
