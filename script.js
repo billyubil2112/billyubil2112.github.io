@@ -1,20 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- 1. SCROLL OBSERVER (Fade-in animations) ---
+    // --- 1. SCROLL ANIMATIONS ---
     const faders = document.querySelectorAll('.fade-in');
+    
     const appearOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -40px 0px" 
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px" 
     };
 
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return; 
-            } else {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); 
-            }
+            if (!entry.isIntersecting) return;
+            
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); 
         });
     }, appearOptions);
 
@@ -23,21 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// --- 2. IMAGE MODAL LOGIC (Certificate Viewer) ---
+// --- 2. CERTIFICATE VIEWER MODAL ---
 function openModal(imageSrc, captionText) {
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("expandedImg");
     const caption = document.getElementById("modalCaption");
 
     modal.classList.add("show");
-    
-    // Fallback: If you don't have the image file yet, it shows a text placeholder
     modalImg.src = imageSrc; 
-    modalImg.onerror = function() {
-        this.src = "https://via.placeholder.com/800x600.png?text=Image+Not+Uploaded+Yet";
-    };
-    
     caption.innerHTML = captionText;
+    
+    // Fallback if image isn't loaded/found yet
+    modalImg.onerror = function() {
+        this.src = "https://via.placeholder.com/800x600.png?text=Certificate+Image+Pending";
+    };
 }
 
 function closeModal() {
@@ -45,7 +43,7 @@ function closeModal() {
     modal.classList.remove("show");
 }
 
-// Close the modal if the user clicks anywhere outside the image
+// Close when clicking outside the image
 window.onclick = function(event) {
     const modal = document.getElementById("imageModal");
     if (event.target == modal) {
