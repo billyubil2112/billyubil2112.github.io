@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billy Ubil | Engineering Portfolio</title>
+    <title>Billy Ubil | Engineering & Dev Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +13,6 @@
         <div class="logo">BU.</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -23,51 +22,60 @@
     <!-- HERO SECTION -->
     <header class="hero">
         <div class="hero-content fade-in">
-            <p class="greeting">Objective: Bridging Engineering & Digital Solutions</p>
+            <p class="greeting">Systematic Engineering & Interactive Web Design</p>
             <h1><span class="highlight">Billy Ubil.</span></h1>
-            <h2>Mechanical Engineer & Web UI Developer.</h2>
-            <p>Showcasing my technical projects, hands-on fabrication experience, and digital development credentials. Currently advancing my mechanical engineering studies at Universiti Teknologi Malaysia (UTM).</p>
-            <a href="#projects" class="btn">View Portfolio</a>
+            <h2>Mechanical Engineer & Web Developer.</h2>
+            <p>Bridging traditional mechanical fabrication and CAD with modern front-end web development. Currently advancing my engineering studies at Universiti Teknologi Malaysia (UTM).</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn outline">Contact Me</a>
+            </div>
         </div>
     </header>
 
     <!-- ABOUT & SKILLS SECTION -->
     <section id="about" class="about-section fade-in">
         <div class="section-header">
-            <h2>About & Expertise</h2>
-            <p class="subtitle">A blend of core mechanical theory, fabrication, and front-end programming.</p>
+            <h2>About Me</h2>
+            <div class="header-line"></div>
         </div>
         
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Originally from Sabah, I hold a Diploma in Mechanical Engineering from Politeknik Kota Kinabalu. My objective is to optimize industrial processes by combining traditional mechanical principles with modern digital interfaces.</p>
-                <p>I have a strong career interest in the oil & gas industry and the logistics sector. Beyond the classroom, I actively build web-based dashboards and develop my hands-on fabrication proficiencies.</p>
-            </div>
+        <!-- The About text is now above the skills -->
+        <div class="about-text-container">
+            <p>Originally from Sabah, I hold a Diploma in Mechanical Engineering from Politeknik Kota Kinabalu. My focus is on creating optimized, real-world solutions—whether that means turning a wrench on a generator or writing clean HTML and CSS for a digital interface.</p>
+            <p>I have hands-on workshop experience with fabrication and maintenance, alongside a rapidly growing proficiency in web development. I am actively working through a certified Full-Stack Developer curriculum to bring digital telemetry and UI capabilities into industrial engineering spaces.</p>
+        </div>
             
-            <!-- NEW CATEGORIZED SKILLS -->
+        <div class="skills-wrapper">
+            <h3>Technical Expertise</h3>
             <div class="skills-box" id="skills">
+                
                 <div class="skill-category">
-                    <h3>Digital & Web Development</h3>
+                    <h4>Hands-on & Workshop</h4>
                     <div class="skill-tags">
-                        <span>Web UI Development</span>
-                        <span>HTML / CSS</span>
-                        <span>JavaScript Logic</span>
-                        <span>HMI / SCADA UI</span>
+                        <span>Basic Wiring</span>
+                        <span>Genset Repair</span>
+                        <span>Aircon Installation</span>
+                        <span>Welding (TIG, SMAW, MIG)</span>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Engineering & Fabrication</h3>
+                    <h4>Engineering & CAD</h4>
                     <div class="skill-tags">
-                        <span>Welding (TIG, SMAW, MIG)</span>
+                        <span>SolidWorks (Basic)</span>
+                        <span>AutoCAD (Basic)</span>
                         <span>Thermodynamics</span>
                         <span>Fluid Mechanics</span>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Software & Tools</h3>
+                    <h4>Digital & Software</h4>
                     <div class="skill-tags">
-                        <span>Microsoft Excel</span>
-                        <span>E-commerce Logistics</span>
+                        <span>Responsive Web Design</span>
+                        <span>HTML5 / CSS3</span>
+                        <span>Microsoft Excel & Word</span>
                     </div>
                 </div>
             </div>
@@ -77,87 +85,127 @@
     <!-- PROJECTS SECTION -->
     <section id="projects" class="projects-section">
         <div class="section-header fade-in">
-            <h2>Technical Projects</h2>
-            <p class="subtitle">Applying theory into interactive and operational solutions.</p>
+            <h2>Featured Projects</h2>
+            <div class="header-line"></div>
         </div>
+
+        <!-- CATEGORY 1: MECHANICAL & CAD -->
+        <h3 class="category-title fade-in">Mechanical & CAD Designs</h3>
+        <div class="project-grid">
+            <!-- SolidWorks Project (Example linking to GrabCAD) -->
+            <div class="project-card fade-in">
+                <div class="card-image-placeholder">SolidWorks Render Image Here</div>
+                <div class="card-content">
+                    <h3>Biomass Boiler Structural Design</h3>
+                    <p>3D CAD modeling of a boiler system demonstrating structural integrity and thermodynamic flow. Designed using SolidWorks.</p>
+                    <a href="https://grabcad.com/your-link-here" target="_blank" class="text-link">View on GrabCAD ➔</a>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="card-image-placeholder">RPM Meter Image Here</div>
+                <div class="card-content">
+                    <h3>Mechanical Revolution Counter</h3>
+                    <p>Engineered concept with precise throttle response logic and dynamic momentum calculations.</p>
+                    <a href="#" class="text-link">View Specifications ➔</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CATEGORY 2: WEB DEVELOPMENT -->
+        <h3 class="category-title fade-in" style="margin-top: 60px;">Front-End Web Development</h3>
         <div class="project-grid">
             
             <div class="project-card fade-in">
-                <div class="card-icon">🏭</div>
-                <h3>Biomass Boiler Digital Twin</h3>
-                <p>A web-based HMI SCADA interface demonstrating thermodynamic principles. Features live pressure and temperature physics, visual flow animations, and interactive feedwater controls.</p>
+                <div class="card-icon">📱</div>
+                <div class="card-content">
+                    <h3>Product Landing Page</h3>
+                    <p>A fully responsive product showcase built with CSS Flexbox, embedded media, and a sticky navigation header.</p>
+                    <a href="https://codepen.io/your-link-here" target="_blank" class="text-link">View Live Site ➔</a>
+                </div>
             </div>
 
             <div class="project-card fade-in">
-                <div class="card-icon">⚙️</div>
-                <h3>Revolution Counter Dashboard</h3>
-                <p>An interactive digital dashboard simulating a mechanical RPM meter. Engineered with realistic throttle response logic, dynamic momentum calculations, and redline safety animations.</p>
+                <div class="card-icon">📋</div>
+                <div class="card-content">
+                    <h3>Engineering Survey Form</h3>
+                    <p>Data collection UI featuring HTML5 validation, customized radio/checkbox inputs, and a clean user experience.</p>
+                    <a href="https://codepen.io/your-link-here" target="_blank" class="text-link">View Live Site ➔</a>
+                </div>
             </div>
             
             <div class="project-card fade-in">
-                <div class="card-icon">📦</div>
-                <h3>HermyShop E-commerce Operations</h3>
-                <p>Approved vendor integration and operational management on the TikTok Shop platform, handling digital storefront logistics, product tracking, and consumer fulfillment workflows.</p>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="card-icon">🎵</div>
-                <h3>Interactive Web Displays</h3>
-                <p>Front-end development projects utilizing advanced CSS formatting, including a responsive, web-based lyrics display application tailored for specific musical arrangements.</p>
+                <div class="card-icon">💻</div>
+                <div class="card-content">
+                    <h3>HMI SCADA Documentation</h3>
+                    <p>A technical documentation webpage utilizing side-navigation and media queries for mobile-friendly reading.</p>
+                    <a href="https://codepen.io/your-link-here" target="_blank" class="text-link">View Live Site ➔</a>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <!-- CERTIFICATES SECTION (Clickable Images) -->
+    <!-- CERTIFICATES SECTION -->
     <section id="certificates" class="cert-section">
         <div class="section-header fade-in">
-            <h2>Certifications & Credentials</h2>
-            <p class="subtitle">Click on any credential to view the document.</p>
+            <h2>Certifications</h2>
+            <div class="header-line"></div>
         </div>
         
         <div class="cert-grid">
-            <!-- To add a real image, change 'placeholder1.jpg' to your actual image file name -->
-            <div class="cert-card fade-in" onclick="openModal('placeholder1.jpg', 'Diploma in Mechanical Engineering')">
-                <div class="cert-icon">🎓</div>
-                <h3>Diploma in Mechanical Engineering</h3>
-                <p>Politeknik Kota Kinabalu</p>
-                <span class="view-text">Click to view image</span>
+            <!-- COMPLETED CERTIFICATE -->
+            <div class="cert-card completed fade-in" onclick="openModal('responsive-web-cert.jpg', 'freeCodeCamp: Responsive Web Design')">
+                <div class="cert-status">Completed</div>
+                <div class="cert-icon">🏆</div>
+                <h3>Responsive Web Design</h3>
+                <p>freeCodeCamp (Earned Aug 2026)</p>
+                <span class="view-text">👁️ Click to view certificate</span>
             </div>
 
-            <div class="cert-card fade-in" onclick="openModal('placeholder2.jpg', 'Web UI Development')">
-                <div class="cert-icon">💻</div>
-                <h3>Web UI Development</h3>
-                <p>Independent Portfolio Work</p>
-                <span class="view-text">Click to view image</span>
+            <!-- UPCOMING CERTIFICATES -->
+            <div class="cert-card upcoming fade-in">
+                <div class="cert-status pending">In Progress</div>
+                <div class="cert-icon">⚡</div>
+                <h3>JavaScript Algorithms</h3>
+                <p>freeCodeCamp</p>
+                <span class="view-text">Module ongoing...</span>
             </div>
             
-            <div class="cert-card fade-in" onclick="openModal('placeholder3.jpg', 'Welding Proficiency Showcase')">
-                <div class="cert-icon">🔥</div>
-                <h3>Practical Welding (TIG, SMAW, MIG)</h3>
-                <p>Workshop Proficiency (Image Showcase)</p>
-                <span class="view-text">Click to view image</span>
+            <div class="cert-card upcoming fade-in">
+                <div class="cert-status pending">Planned</div>
+                <div class="cert-icon">⚛️</div>
+                <h3>Front-End Libraries</h3>
+                <p>freeCodeCamp</p>
+                <span class="view-text">Scheduled</span>
+            </div>
+            
+            <div class="cert-card upcoming fade-in">
+                <div class="cert-status pending">Planned</div>
+                <div class="cert-icon">🗄️</div>
+                <h3>Back-End & APIs</h3>
+                <p>freeCodeCamp</p>
+                <span class="view-text">Scheduled</span>
             </div>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section fade-in">
-        <h2>Professional Inquiries</h2>
-        <p>I am open to exploring professional opportunities, internships, and technical collaborations. Please feel free to review my full resume or reach out directly.</p>
+        <h2>Let's Build Something.</h2>
+        <p>Whether it is turning a wrench in the workshop or writing front-end code, I am ready for the next challenge.</p>
         
         <div class="contact-buttons">
-            <a href="mailto:billyubil2112@gmail.com" class="btn email-btn">✉️ billyubil2112@gmail.com</a>
-            <a href="https://www.linkedin.com/in/billy-ubil-2442a9233" target="_blank" class="btn linkedin-btn">🔗 Connect on LinkedIn</a>
-            <a href="resume.pdf" download="Billy_Ubil_Resume.pdf" class="btn outline resume-btn">📄 Download Resume PDF</a>
+            <a href="mailto:billyubil2112@gmail.com" class="btn">✉️ billyubil2112@gmail.com</a>
+            <a href="https://www.linkedin.com/in/billy-ubil-2442a9233" target="_blank" class="btn linkedin-btn">🔗 LinkedIn</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Billy Ubil. Engineered with pure HTML, CSS & JavaScript.</p>
+        <p>© 2026 Billy Ubil. Hand-coded with HTML, CSS & JavaScript.</p>
     </footer>
 
-    <!-- THE IMAGE MODAL (Hidden by default, triggered by JS) -->
+    <!-- THE IMAGE MODAL -->
     <div id="imageModal" class="modal">
         <span class="close-modal" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="expandedImg">
