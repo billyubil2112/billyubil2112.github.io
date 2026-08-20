@@ -1,13 +1,13 @@
 :root {
-    --bg-main: #0a0e17;
-    --bg-card: #121826;
-    --text-primary: #e6edf3;
-    --text-secondary: #9aa7b8;
-    --accent: #f59e0b;
-    --accent-hover: #d97706;
-    --accent-soft: rgba(245, 158, 11, 0.12);
-    --cyan: #22d3ee;
-    --border: #1e293b;
+    --bg-main: #0B0E14;
+    --bg-card: #11151D;
+    --text-primary: #E6E9EF;
+    --text-secondary: #8B93A7;
+    --accent: #7EA6D4;
+    --accent-hover: #5F8CC0;
+    --accent-soft: rgba(126, 166, 212, 0.12);
+    --cyan: #7EA6D4;
+    --border: #1C2430;
     --font-body: 'Inter', system-ui, sans-serif;
     --font-heading: 'Space Grotesk', system-ui, sans-serif;
     --font-mono: 'Space Mono', monospace;
@@ -22,9 +22,9 @@ body {
     font-family: var(--font-body);
     background-color: var(--bg-main);
     background-image:
-        linear-gradient(rgba(34, 211, 238, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px),
-        radial-gradient(900px 500px at 85% -10%, rgba(245, 158, 11, 0.08), transparent 60%);
+        linear-gradient(rgba(126, 166, 212, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126, 166, 212, 0.045) 1px, transparent 1px),
+        radial-gradient(900px 500px at 85% -10%, rgba(126, 166, 212, 0.07), transparent 60%);
     background-size: 44px 44px, 44px 44px, auto;
     color: var(--text-primary);
     line-height: 1.6;
@@ -34,7 +34,7 @@ body {
 }
 
 h1, h2 { color: #fff; font-family: var(--font-heading); letter-spacing: -0.02em; }
-::selection { background: rgba(245, 158, 11, 0.35); }
+::selection { background: rgba(126, 166, 212, 0.35); }
 
 /* Top bar */
 .topbar {
@@ -90,7 +90,7 @@ main { flex: 1; width: 100%; max-width: 860px; margin: 0 auto; padding: 0 5% 60p
 .tool.active { display: block; animation: fade 0.25s ease; }
 @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 .tool h2 { font-size: 1.6rem; margin-bottom: 6px; }
-.formula { font-family: var(--font-mono); color: var(--cyan); font-size: 0.82rem; margin-bottom: 22px; border: 1px solid rgba(34, 211, 238, 0.25); display: inline-block; padding: 6px 12px; border-radius: 4px; }
+.formula { font-family: var(--font-mono); color: var(--cyan); font-size: 0.82rem; margin-bottom: 22px; border: 1px solid rgba(126, 166, 212, 0.25); display: inline-block; padding: 6px 12px; border-radius: 4px; }
 
 .tool-in {
     display: grid;
