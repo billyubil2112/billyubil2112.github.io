@@ -46,7 +46,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background: rgba(10, 14, 23, 0.9);
+    background: rgba(11, 14, 20, 0.92);
     position: fixed;
     width: 100%;
     backdrop-filter: blur(10px);
@@ -93,7 +93,7 @@ nav {
 .linkedin-btn:hover { background: #004182; border-color: #004182; }
 
 /* Layouts */
-section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; position: relative; }
+section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; position: relative; content-visibility: auto; contain-intrinsic-size: auto 600px; }
 .section-header { margin-bottom: 50px; text-align: center; }
 .section-header h2 { font-size: 36px; margin-bottom: 10px; }
 .header-line { height: 3px; width: 60px; background: var(--accent); margin: 0 auto; border-radius: 2px; }
@@ -250,6 +250,10 @@ footer { text-align: center; padding: 30px; border-top: 1px solid var(--border);
 
 /* Mobile Menu & Media Queries */
 @media (max-width: 768px) {
+    body { background-image: radial-gradient(600px 300px at 50% -5%, rgba(126, 166, 212, 0.08), transparent 60%); background-size: auto; }
+    nav { background: rgba(11, 14, 20, 0.99); backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .hero-photo { transition: opacity 0.5s ease; }
+    .projects-bg { transition: opacity 0.6s ease; }
     .hamburger { display: block; }
     .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 10px 5%; z-index: 99; }
     .nav-links.open { display: flex; }
@@ -260,6 +264,24 @@ footer { text-align: center; padding: 30px; border-top: 1px solid var(--border);
     .btn { text-align: center; width: 100%; }
     .stats-strip { grid-template-columns: 1fr; margin-top: -20px; }
     section { padding-top: 80px; }
+    .hero { padding: 0 6%; }
+    .hero-content { width: 100%; }
+    .greeting { font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 12px; }
+    .hero h1 { font-size: 2.75rem; line-height: 1.1; margin-bottom: 8px; }
+    .hero h2 { font-size: 1.15rem; margin-bottom: 14px; line-height: 1.4; }
+    .hero p { font-size: 0.95rem; }
+    .spec { font-size: 0.7rem; letter-spacing: 0.1em; padding: 7px 12px; line-height: 1.8; margin-bottom: 18px; }
+    .hero-buttons { gap: 12px; }
+}
+
+@media (max-width: 420px) {
+    .hero { padding: 0 6%; }
+    .greeting { font-size: 0.7rem; }
+    .hero h1 { font-size: 2.3rem; }
+    .hero h2 { font-size: 1.02rem; }
+    .hero p { font-size: 0.9rem; }
+    .spec { font-size: 0.66rem; }
+    .hero-buttons { gap: 10px; }
 }
 
 /* Animations */

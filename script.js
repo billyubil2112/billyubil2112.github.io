@@ -38,8 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // --- 2. HERO PHOTO FADE ON SCROLL ---
+    let ticking = false;
     const onScroll = () => {
-        document.body.classList.toggle('scrolled', window.scrollY > 60);
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+            document.body.classList.toggle('scrolled', window.scrollY > 60);
+            ticking = false;
+        });
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
