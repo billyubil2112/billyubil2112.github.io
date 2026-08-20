@@ -197,6 +197,20 @@ body.scrolled .hero-photo { opacity: 0; }
 .skill-tags span { background: var(--accent-soft); color: var(--accent); padding: 6px 12px; border-radius: 4px; font-size: 0.9rem; border: 1px solid rgba(245, 158, 11, 0.25); }
 
 /* Projects */
+.projects-section { max-width: none; width: 100%; margin: 0; }
+.projects-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.projects-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        linear-gradient(rgba(10, 14, 23, 0.92), rgba(10, 14, 23, 0.72) 40%, rgba(10, 14, 23, 0.95)),
+        url('utm-projects.jpg') center 40%/cover no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease;
+    will-change: opacity;
+}
+.projects-section.photo-on .projects-bg { opacity: 1; }
 .category-title { font-size: 22px; margin-bottom: 25px; color: var(--text-primary); border-left: 4px solid var(--accent); padding-left: 15px; font-family: var(--font-heading); }
 .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .project-card { background: var(--bg-card); border-radius: 4px; border: 1px solid var(--border); overflow: hidden; transition: transform 0.3s, border-color 0.3s; display: flex; flex-direction: column; position: relative; }

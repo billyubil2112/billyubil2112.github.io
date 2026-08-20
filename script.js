@@ -43,4 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+
+    // --- 3. PROJECTS PHOTO FADE IN/OUT ---
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+        const projectsObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                projectsSection.classList.toggle('photo-on', entry.isIntersecting);
+            });
+        }, { threshold: 0.12 });
+        projectsObserver.observe(projectsSection);
+    }
 });
