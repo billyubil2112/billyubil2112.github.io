@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billy Ubil | Engineering & Dev Portfolio</title>
+    <meta name="description" content="Mechanical engineering student & web developer. SolidWorks, AutoCAD, fabrication and modern front-end development." />
+    <meta property="og:title" content="Billy Ubil — Mechanical Engineering Student & Web Developer" />
+    <meta property="og:description" content="Mechanical engineering student & web developer. SolidWorks, AutoCAD, fabrication and modern front-end development." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://billyubil2112.github.io/" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%9B%A0%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,11 +31,13 @@
 
     <!-- HERO SECTION -->
     <header class="hero">
+        <div class="blueprint" aria-hidden="true"></div>
         <div class="hero-content fade-in">
             <p class="greeting">Systematic Engineering & Interactive Web Design</p>
             <h1><span class="highlight">Billy Ubil.</span></h1>
             <h2>Mechanical Engineering Student &amp; Web Developer.</h2>
             <p>Bridging traditional mechanical fabrication and CAD with modern front-end web development. Pursuing my engineering degree at Universiti Teknologi Malaysia (UTM) while shipping working web apps.</p>
+            <span class="spec">ENGINEER // WEB DEVELOPER // UTM</span>
             <div class="hero-buttons">
                 <a href="#projects" class="btn">View Projects</a>
                 <a href="#contact" class="btn outline">Contact Me</a>
@@ -35,9 +45,17 @@
         </div>
     </header>
 
+    <!-- STATS STRIP -->
+    <div class="stats-strip">
+        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">SolidWorks Models</span></div>
+        <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Web Projects Shipped</span></div>
+        <div class="stat"><span class="stat-num">1×</span><span class="stat-label">Certified — Responsive Web Design</span></div>
+    </div>
+
     <!-- ABOUT & SKILLS SECTION -->
     <section id="about" class="about-section fade-in">
         <div class="section-header">
+            <div class="eyebrow">01 / About</div>
             <h2>About Me</h2>
             <div class="header-line"></div>
         </div>
@@ -87,6 +105,7 @@
     <!-- PROJECTS SECTION -->
     <section id="projects" class="projects-section">
         <div class="section-header fade-in">
+            <div class="eyebrow">02 / Projects</div>
             <h2>Featured Projects</h2>
             <div class="header-line"></div>
         </div>
@@ -99,6 +118,7 @@
                 <div class="card-content">
                     <h3>Biomass Boiler Structural Design</h3>
                     <p>3D CAD modeling of a boiler structure with component assemblies and production drawings, modelled in SolidWorks.</p>
+                    <div class="title-block"><span>Billy Ubil</span><span>SolidWorks</span><span>2026</span></div>
                 </div>
             </div>
 
@@ -107,6 +127,7 @@
                 <div class="card-content">
                     <h3>Mechanical Revolution Counter</h3>
                     <p>Conceptual design of an RPM counter focusing on mechanism layout and part-to-part fit within an assembly.</p>
+                    <div class="title-block"><span>Billy Ubil</span><span>SolidWorks</span><span>2026</span></div>
                 </div>
             </div>
         </div>
@@ -125,6 +146,7 @@
                     <h3>SpendSync — Budget Tracker</h3>
                     <p>A fully client-side budget tracker (charts, saving pots, CSV exports, PWA offline install) built with vanilla JS and deployed on GitHub Pages.</p>
                     <a href="https://billyubil2112.github.io/SpendSync/" target="_blank" class="text-link">View Live App ➔</a>
+                    <div class="title-block"><span>Billy Ubil</span><span>Web / Deployed</span><span>2026</span></div>
                 </div>
             </div>
 
@@ -134,6 +156,7 @@
                     <h3>Product Landing Page</h3>
                     <p>A fully responsive product showcase built with CSS Flexbox, embedded media, and a sticky navigation header.</p>
                     <span class="tag">freeCodeCamp project</span>
+                    <div class="title-block"><span>Billy Ubil</span><span>Web / Design</span><span>2026</span></div>
                 </div>
             </div>
 
@@ -143,6 +166,7 @@
                     <h3>Engineering Survey Form</h3>
                     <p>Data collection UI featuring HTML5 validation, customized radio/checkbox inputs, and a clean user experience.</p>
                     <span class="tag">freeCodeCamp project</span>
+                    <div class="title-block"><span>Billy Ubil</span><span>Web / Design</span><span>2026</span></div>
                 </div>
             </div>
 
@@ -152,6 +176,7 @@
                     <h3>Technical Documentation Page</h3>
                     <p>A technical documentation webpage utilizing side-navigation and media queries for mobile-friendly reading.</p>
                     <span class="tag">freeCodeCamp project</span>
+                    <div class="title-block"><span>Billy Ubil</span><span>Web / Design</span><span>2026</span></div>
                 </div>
             </div>
 
@@ -161,6 +186,7 @@
     <!-- CERTIFICATES SECTION -->
     <section id="certificates" class="cert-section">
         <div class="section-header fade-in">
+            <div class="eyebrow">03 / Certifications</div>
             <h2>Certifications</h2>
             <div class="header-line"></div>
         </div>
@@ -205,6 +231,7 @@
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section fade-in">
+        <div class="eyebrow">04 / Contact</div>
         <h2>Let's Build Something.</h2>
         <p>Whether it is turning a wrench in the workshop or writing front-end code, I am ready for the next challenge.</p>
         
