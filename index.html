@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billy Ubil | Engineering & Dev Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%9B%A0%EF%B8%8F%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +12,8 @@
     <!-- NAVIGATION -->
     <nav>
         <div class="logo">BU.</div>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certificates">Certificates</a></li>
@@ -24,8 +26,8 @@
         <div class="hero-content fade-in">
             <p class="greeting">Systematic Engineering & Interactive Web Design</p>
             <h1><span class="highlight">Billy Ubil.</span></h1>
-            <h2>Mechanical Engineer & Web Developer.</h2>
-            <p>Bridging traditional mechanical fabrication and CAD with modern front-end web development. Currently advancing my engineering studies at Universiti Teknologi Malaysia (UTM).</p>
+            <h2>Mechanical Engineering Student &amp; Web Developer.</h2>
+            <p>Bridging traditional mechanical fabrication and CAD with modern front-end web development. Pursuing my engineering degree at Universiti Teknologi Malaysia (UTM) while shipping working web apps.</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn">View Projects</a>
                 <a href="#contact" class="btn outline">Contact Me</a>
@@ -53,20 +55,18 @@
                 <div class="skill-category">
                     <h4>Hands-on & Workshop</h4>
                     <div class="skill-tags">
-                        <span>Basic Wiring</span>
-                        <span>Genset Repair</span>
-                        <span>Aircon Installation</span>
-                        <span>Welding (TIG, SMAW, MIG)</span>
+                        <span>Electrical Wiring & Control Circuits</span>
+                        <span>Diesel Generator Servicing &amp; Troubleshooting</span>
+                        <span>Split-Unit Air Conditioning Installation &amp; Servicing</span>
+                        <span>Welding (SMAW, MIG, TIG)</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
                     <h4>Engineering & CAD</h4>
                     <div class="skill-tags">
-                        <span>SolidWorks (Basic)</span>
-                        <span>AutoCAD (Basic)</span>
-                        <span>Thermodynamics</span>
-                        <span>Fluid Mechanics</span>
+                        <span>SolidWorks (Modeling, Assemblies, Drawings)</span>
+                        <span>AutoCAD (2D Drafting)</span>
                     </div>
                 </div>
 
@@ -75,7 +75,9 @@
                     <div class="skill-tags">
                         <span>Responsive Web Design</span>
                         <span>HTML5 / CSS3</span>
-                        <span>Microsoft Excel & Word</span>
+                        <span>JavaScript (ES6)</span>
+                        <span>Git &amp; GitHub Pages</span>
+                        <span>Microsoft Excel &amp; Word</span>
                     </div>
                 </div>
             </div>
@@ -92,36 +94,46 @@
         <!-- CATEGORY 1: MECHANICAL & CAD -->
         <h3 class="category-title fade-in">Mechanical & CAD Designs</h3>
         <div class="project-grid">
-            <!-- SolidWorks Project (Example linking to GrabCAD) -->
             <div class="project-card fade-in">
-                <div class="card-image-placeholder">SolidWorks Render Image Here</div>
+                <div class="card-icon">🏭</div>
                 <div class="card-content">
                     <h3>Biomass Boiler Structural Design</h3>
-                    <p>3D CAD modeling of a boiler system demonstrating structural integrity and thermodynamic flow. Designed using SolidWorks.</p>
-                    <a href="https://grabcad.com/your-link-here" target="_blank" class="text-link">View on GrabCAD ➔</a>
+                    <p>3D CAD modeling of a boiler structure with component assemblies and production drawings, modelled in SolidWorks.</p>
                 </div>
             </div>
-            
+
             <div class="project-card fade-in">
-                <div class="card-image-placeholder">RPM Meter Image Here</div>
+                <div class="card-icon">⚙️</div>
                 <div class="card-content">
                     <h3>Mechanical Revolution Counter</h3>
-                    <p>Engineered concept with precise throttle response logic and dynamic momentum calculations.</p>
-                    <a href="#" class="text-link">View Specifications ➔</a>
+                    <p>Conceptual design of an RPM counter focusing on mechanism layout and part-to-part fit within an assembly.</p>
                 </div>
             </div>
+        </div>
+        <div class="gallery-cta fade-in">
+            <p>I have 10+ SolidWorks models across parts, assemblies, sheet metal and drawings.</p>
+            <a href="https://grabcad.com/your-handle" target="_blank" class="btn">View all on GrabCAD ➔</a>
         </div>
 
         <!-- CATEGORY 2: WEB DEVELOPMENT -->
         <h3 class="category-title fade-in" style="margin-top: 60px;">Front-End Web Development</h3>
         <div class="project-grid">
-            
+
+            <div class="project-card fade-in">
+                <div class="card-icon">💸</div>
+                <div class="card-content">
+                    <h3>SpendSync — Budget Tracker</h3>
+                    <p>A fully client-side budget tracker (charts, saving pots, CSV exports, PWA offline install) built with vanilla JS and deployed on GitHub Pages.</p>
+                    <a href="https://billyubil2112.github.io/SpendSync/" target="_blank" class="text-link">View Live App ➔</a>
+                </div>
+            </div>
+
             <div class="project-card fade-in">
                 <div class="card-icon">📱</div>
                 <div class="card-content">
                     <h3>Product Landing Page</h3>
                     <p>A fully responsive product showcase built with CSS Flexbox, embedded media, and a sticky navigation header.</p>
-                    <a href="https://codepen.io/your-link-here" target="_blank" class="text-link">View Live Site ➔</a>
+                    <span class="tag">freeCodeCamp project</span>
                 </div>
             </div>
 
@@ -130,16 +142,16 @@
                 <div class="card-content">
                     <h3>Engineering Survey Form</h3>
                     <p>Data collection UI featuring HTML5 validation, customized radio/checkbox inputs, and a clean user experience.</p>
-                    <a href="https://codepen.io/your-link-here" target="_blank" class="text-link">View Live Site ➔</a>
+                    <span class="tag">freeCodeCamp project</span>
                 </div>
             </div>
-            
+
             <div class="project-card fade-in">
                 <div class="card-icon">💻</div>
                 <div class="card-content">
-                    <h3>HMI SCADA Documentation</h3>
+                    <h3>Technical Documentation Page</h3>
                     <p>A technical documentation webpage utilizing side-navigation and media queries for mobile-friendly reading.</p>
-                    <a href="https://codepen.io/your-link-here" target="_blank" class="text-link">View Live Site ➔</a>
+                    <span class="tag">freeCodeCamp project</span>
                 </div>
             </div>
 
@@ -161,6 +173,7 @@
                 <h3>Responsive Web Design</h3>
                 <p>freeCodeCamp (Earned Aug 2026)</p>
                 <span class="view-text">👁️ Click to view certificate</span>
+                <a class="cert-verify" href="https://www.freecodecamp.org/certification/your-username/responsive-web-design" target="_blank" onclick="event.stopPropagation()">Verify on freeCodeCamp ↗</a>
             </div>
 
             <!-- UPCOMING CERTIFICATES -->

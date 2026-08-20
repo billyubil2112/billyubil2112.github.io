@@ -57,6 +57,20 @@ nav {
 .linkedin-btn { background: #0a66c2; border-color: #0a66c2; color: white; }
 .linkedin-btn:hover { background: #004182; border-color: #004182; }
 
+/* Hamburger (mobile menu) */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-size: 22px;
+    line-height: 1;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.hamburger:hover { border-color: var(--accent); }
+
 /* Layouts */
 section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
 .section-header { margin-bottom: 50px; text-align: center; }
@@ -96,6 +110,11 @@ section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
 .card-content p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
 .text-link { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-top: auto; }
 .text-link:hover { text-decoration: underline; }
+.tag { display: inline-block; margin-top: auto; font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); background: rgba(56, 189, 248, 0.08); border: 1px solid var(--border); padding: 4px 10px; border-radius: 999px; }
+.gallery-cta { margin-top: 30px; padding: 25px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; text-align: center; }
+.gallery-cta p { color: var(--text-secondary); margin-bottom: 15px; }
+.cert-verify { display: inline-block; margin-top: 12px; font-size: 0.8rem; color: var(--accent); font-weight: 600; }
+.cert-verify:hover { text-decoration: underline; }
 
 /* Certificates */
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
@@ -118,7 +137,10 @@ footer { text-align: center; padding: 30px; border-top: 1px solid var(--border);
 
 /* Mobile Menu & Media Queries */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Kept simple for now, can add hamburger menu later */
+    .hamburger { display: block; }
+    .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 10px 5%; z-index: 99; }
+    .nav-links.open { display: flex; }
+    .nav-links li { padding: 14px 0; border-bottom: 1px solid var(--border); }
     .hero h1 { font-size: 3rem; }
     .hero-buttons { flex-direction: column; }
     .btn { text-align: center; width: 100%; }
