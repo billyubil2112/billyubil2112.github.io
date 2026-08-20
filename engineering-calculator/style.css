@@ -8,9 +8,9 @@
     --accent-soft: rgba(245, 158, 11, 0.12);
     --cyan: #22d3ee;
     --border: #1e293b;
-    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
     --font-heading: 'Space Grotesk', system-ui, sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-mono: 'Space Mono', monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }

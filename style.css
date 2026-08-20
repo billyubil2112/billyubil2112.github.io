@@ -9,9 +9,9 @@
     --accent-soft: rgba(245, 158, 11, 0.12);
     --cyan: #22d3ee;
     --border: #1e293b;
-    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
     --font-heading: 'Space Grotesk', system-ui, sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-mono: 'Space Mono', monospace;
 }
 
 html { scroll-behavior: smooth; }
@@ -86,7 +86,7 @@ nav {
     border: 2px solid var(--accent);
     cursor: pointer;
 }
-.btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35); }
+.btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(245, 158, 11, 0.28); }
 .btn.outline { background: transparent; color: var(--accent); }
 .btn.outline:hover { background: var(--accent-soft); color: var(--accent); }
 .linkedin-btn { background: #0a66c2; border-color: #0a66c2; color: white; }
@@ -142,7 +142,8 @@ body.scrolled .hero-photo { opacity: 0; }
 .hero-content { position: relative; z-index: 2; }
 .greeting { color: var(--accent); font-family: var(--font-mono); font-size: 15px; letter-spacing: 0.12em; margin-bottom: 15px; }
 .hero h1 { font-size: 4rem; line-height: 1.08; margin-bottom: 10px; }
-.highlight { color: transparent; -webkit-text-stroke: 1.5px var(--accent); text-shadow: 2px 2px 0px rgba(245, 158, 11, 0.25); }
+.highlight { color: #ffffff; font-weight: 700; letter-spacing: 0.01em; }
+.highlight .dot { color: var(--accent); }
 .hero h2 { font-size: 1.8rem; color: var(--text-secondary); margin-bottom: 20px; }
 .hero p { max-width: 600px; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 24px; }
 .spec {
