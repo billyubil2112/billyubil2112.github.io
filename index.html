@@ -9,7 +9,7 @@
     <meta property="og:description" content="Mechanical engineering student & web developer. SolidWorks, AutoCAD, fabrication and modern front-end development." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://billyubil2112.github.io/" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%9B%A0%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3Ctext x='50' y='70' font-family='Arial,sans-serif' font-size='54' font-weight='bold' text-anchor='middle' fill='%230a0e17'%3EBU%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -24,13 +24,14 @@
         <ul class="nav-links" id="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- HERO SECTION -->
     <header class="hero">
+        <div class="hero-photo" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="blueprint" aria-hidden="true"></div>
         <div class="hero-content fade-in">
             <p class="greeting">Systematic Engineering & Interactive Web Design</p>
@@ -48,7 +49,7 @@
     <!-- STATS STRIP -->
     <div class="stats-strip">
         <div class="stat"><span class="stat-num">10+</span><span class="stat-label">SolidWorks Models</span></div>
-        <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Web Projects Shipped</span></div>
+        <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Web Projects Shipped</span></div>
         <div class="stat"><span class="stat-num">1×</span><span class="stat-label">Certified — Responsive Web Design</span></div>
     </div>
 
@@ -114,20 +115,20 @@
         <h3 class="category-title fade-in">Mechanical & CAD Designs</h3>
         <div class="project-grid">
             <div class="project-card fade-in">
-                <div class="card-icon">🏭</div>
+                <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="41" r="4"/><line x1="24" y1="37" x2="24" y2="25"/><rect x="15" y="9" width="18" height="20" rx="2"/><line x1="21" y1="15" x2="21" y2="21"/><line x1="27" y1="15" x2="27" y2="21"/><line x1="8" y1="9" x2="8" y2="45"/><line x1="40" y1="9" x2="40" y2="45"/></svg></div>
                 <div class="card-content">
-                    <h3>Biomass Boiler Structural Design</h3>
-                    <p>3D CAD modeling of a boiler structure with component assemblies and production drawings, modelled in SolidWorks.</p>
-                    <div class="title-block"><span>Billy Ubil</span><span>SolidWorks</span><span>2026</span></div>
+                    <h3>V6 Engine Assembly</h3>
+                    <p>Multi-cylinder engine built in SolidWorks — cylinder block, crankshaft, pistons, con-rods, valvetrain and sump modelled as interlocked parts with mating constraints and motion checks.</p>
+                    <div class="title-block"><span>Billy Ubil</span><span>SolidWorks / Assembly</span><span>2026</span></div>
                 </div>
             </div>
 
             <div class="project-card fade-in">
-                <div class="card-icon">⚙️</div>
+                <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="13" width="34" height="22" rx="4"/><line x1="12" y1="13" x2="12" y2="35"/><line x1="20" y1="13" x2="20" y2="35"/><line x1="28" y1="13" x2="28" y2="35"/><line x1="36" y1="13" x2="36" y2="35"/><line x1="7" y1="24" x2="2" y2="24"/><line x1="46" y1="24" x2="41" y2="24"/></svg></div>
                 <div class="card-content">
-                    <h3>Mechanical Revolution Counter</h3>
-                    <p>Conceptual design of an RPM counter focusing on mechanism layout and part-to-part fit within an assembly.</p>
-                    <div class="title-block"><span>Billy Ubil</span><span>SolidWorks</span><span>2026</span></div>
+                    <h3>Shell &amp; Tube Heat Exchanger</h3>
+                    <p>Shell, tube bundle, baffles, channel covers and flanges modelled to assembly fit with production drawings — typical of oil &amp; gas and boiler duty heat-transfer equipment.</p>
+                    <div class="title-block"><span>Billy Ubil</span><span>SolidWorks / Assembly</span><span>2026</span></div>
                 </div>
             </div>
         </div>
@@ -141,116 +142,44 @@
         <div class="project-grid">
 
             <div class="project-card fade-in">
-                <div class="card-icon">💸</div>
+                <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="22" width="6" height="16"/><rect x="18" y="14" width="6" height="24"/><rect x="28" y="6" width="6" height="32"/><line x1="5" y1="42" x2="43" y2="42"/></svg></div>
                 <div class="card-content">
                     <h3>SpendSync — Budget Tracker</h3>
-                    <p>A fully client-side budget tracker (charts, saving pots, CSV exports, PWA offline install) built with vanilla JS and deployed on GitHub Pages.</p>
+                    <p>A fully client-side budget tracker (charts, saving pots, income tracking, CSV exports, PWA offline install) built with vanilla JS and deployed on GitHub Pages.</p>
                     <a href="https://billyubil2112.github.io/SpendSync/" target="_blank" class="text-link">View Live App ➔</a>
+                    <span class="tag">freeCodeCamp RWD Certified</span>
                     <div class="title-block"><span>Billy Ubil</span><span>Web / Deployed</span><span>2026</span></div>
                 </div>
             </div>
 
             <div class="project-card fade-in">
-                <div class="card-icon">📱</div>
+                <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="5" width="28" height="38" rx="3"/><rect x="14" y="9" width="20" height="7"/><line x1="16" y1="23" x2="16" y2="39"/><line x1="24" y1="23" x2="24" y2="39"/><line x1="32" y1="23" x2="32" y2="39"/><line x1="16" y1="23" x2="32" y2="23"/><line x1="16" y1="31" x2="32" y2="31"/></svg></div>
                 <div class="card-content">
-                    <h3>Product Landing Page</h3>
-                    <p>A fully responsive product showcase built with CSS Flexbox, embedded media, and a sticky navigation header.</p>
-                    <span class="tag">freeCodeCamp project</span>
-                    <div class="title-block"><span>Billy Ubil</span><span>Web / Design</span><span>2026</span></div>
+                    <h3>Engineering Calculator Suite</h3>
+                    <p>Unit converter, bolt torque, beam deflection, cylinder &amp; pipe volume, hoop stress and axial stress tools — quick design checks running 100% in the browser.</p>
+                    <a href="engineering-calculator/" class="text-link">Open Calculator ➔</a>
+                    <div class="title-block"><span>Billy Ubil</span><span>Web / Deployed</span><span>2026</span></div>
                 </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="card-icon">📋</div>
-                <div class="card-content">
-                    <h3>Engineering Survey Form</h3>
-                    <p>Data collection UI featuring HTML5 validation, customized radio/checkbox inputs, and a clean user experience.</p>
-                    <span class="tag">freeCodeCamp project</span>
-                    <div class="title-block"><span>Billy Ubil</span><span>Web / Design</span><span>2026</span></div>
-                </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="card-icon">💻</div>
-                <div class="card-content">
-                    <h3>Technical Documentation Page</h3>
-                    <p>A technical documentation webpage utilizing side-navigation and media queries for mobile-friendly reading.</p>
-                    <span class="tag">freeCodeCamp project</span>
-                    <div class="title-block"><span>Billy Ubil</span><span>Web / Design</span><span>2026</span></div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CERTIFICATES SECTION -->
-    <section id="certificates" class="cert-section">
-        <div class="section-header fade-in">
-            <div class="eyebrow">03 / Certifications</div>
-            <h2>Certifications</h2>
-            <div class="header-line"></div>
-        </div>
-        
-        <div class="cert-grid">
-            <!-- COMPLETED CERTIFICATE -->
-            <div class="cert-card completed fade-in" onclick="openModal('responsive-web-cert.jpg', 'freeCodeCamp: Responsive Web Design')">
-                <div class="cert-status">Completed</div>
-                <div class="cert-icon">🏆</div>
-                <h3>Responsive Web Design</h3>
-                <p>freeCodeCamp (Earned Aug 2026)</p>
-                <span class="view-text">👁️ Click to view certificate</span>
-                <a class="cert-verify" href="https://www.freecodecamp.org/certification/your-username/responsive-web-design" target="_blank" onclick="event.stopPropagation()">Verify on freeCodeCamp ↗</a>
-            </div>
-
-            <!-- UPCOMING CERTIFICATES -->
-            <div class="cert-card upcoming fade-in">
-                <div class="cert-status pending">In Progress</div>
-                <div class="cert-icon">⚡</div>
-                <h3>JavaScript Algorithms</h3>
-                <p>freeCodeCamp</p>
-                <span class="view-text">Module ongoing...</span>
-            </div>
-            
-            <div class="cert-card upcoming fade-in">
-                <div class="cert-status pending">Planned</div>
-                <div class="cert-icon">⚛️</div>
-                <h3>Front-End Libraries</h3>
-                <p>freeCodeCamp</p>
-                <span class="view-text">Scheduled</span>
-            </div>
-            
-            <div class="cert-card upcoming fade-in">
-                <div class="cert-status pending">Planned</div>
-                <div class="cert-icon">🗄️</div>
-                <h3>Back-End & APIs</h3>
-                <p>freeCodeCamp</p>
-                <span class="view-text">Scheduled</span>
             </div>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section fade-in">
-        <div class="eyebrow">04 / Contact</div>
+        <div class="eyebrow">03 / Contact</div>
         <h2>Let's Build Something.</h2>
         <p>Whether it is turning a wrench in the workshop or writing front-end code, I am ready for the next challenge.</p>
         
         <div class="contact-buttons">
-            <a href="mailto:billyubil2112@gmail.com" class="btn">✉️ billyubil2112@gmail.com</a>
-            <a href="https://www.linkedin.com/in/billy-ubil-2442a9233" target="_blank" class="btn linkedin-btn">🔗 LinkedIn</a>
+            <a href="mailto:billyubil2112@gmail.com" class="btn">billyubil2112@gmail.com</a>
+            <a href="https://www.linkedin.com/in/billy-ubil-2442a9233" target="_blank" class="btn linkedin-btn">LinkedIn</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Billy Ubil. Hand-coded with HTML, CSS & JavaScript.</p>
+        <p>&copy; 2026 Billy Ubil &middot; Header photo: UTM Kuala Lumpur by CEphoto, Uwe Aranas (CC BY-SA 3.0)</p>
+        <p style="margin-top:6px;">Hand-coded with HTML, CSS &amp; JavaScript.</p>
     </footer>
-
-    <!-- THE IMAGE MODAL -->
-    <div id="imageModal" class="modal">
-        <span class="close-modal" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="expandedImg">
-        <div id="modalCaption"></div>
-    </div>
 
     <script src="script.js"></script>
 </body>

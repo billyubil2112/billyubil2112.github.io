@@ -36,33 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
     });
-});
 
-// --- 2. CERTIFICATE VIEWER MODAL ---
-function openModal(imageSrc, captionText) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("expandedImg");
-    const caption = document.getElementById("modalCaption");
-
-    modal.classList.add("show");
-    modalImg.src = imageSrc; 
-    caption.innerHTML = captionText;
-    
-    // Fallback if image isn't loaded/found yet
-    modalImg.onerror = function() {
-        this.src = "https://via.placeholder.com/800x600.png?text=Certificate+Image+Pending";
+    // --- 2. HERO PHOTO FADE ON SCROLL ---
+    const onScroll = () => {
+        document.body.classList.toggle('scrolled', window.scrollY > 60);
     };
-}
-
-function closeModal() {
-    const modal = document.getElementById("imageModal");
-    modal.classList.remove("show");
-}
-
-// Close when clicking outside the image
-window.onclick = function(event) {
-    const modal = document.getElementById("imageModal");
-    if (event.target == modal) {
-        closeModal();
-    }
-}
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+});

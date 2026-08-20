@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Calculator — Billy Ubil</title>
+    <meta name="description" content="Quick mechanical calculations for design checks — unit conversion, bolt torque, beam deflection, cylinder volume, hoop stress and axial stress. Runs entirely in your browser." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <a href="../" class="back">&larr; Portfolio</a>
+        <span class="brand">BU<span class="dot">.</span>ENG-CALC</span>
+    </div>
+
+    <header class="hero">
+        <p class="eyebrow">Engineering Toolkit</p>
+        <h1>Engineering Calculator Suite</h1>
+        <p class="sub">Quick mechanical design checks — unit conversion, fastener torque, beam deflection, vessel stress and more. Everything runs locally in your browser.</p>
+    </header>
+
+    <nav class="tabs" aria-label="Calculators">
+        <button data-tool="unit" class="active">Unit Converter</button>
+        <button data-tool="torque">Bolt Torque</button>
+        <button data-tool="beam">Beam Deflection</button>
+        <button data-tool="volume">Cylinder Volume</button>
+        <button data-tool="hoop">Hoop Stress</button>
+        <button data-tool="axial">Axial Stress</button>
+    </nav>
+
+    <main>
+
+        <!-- UNIT CONVERTER -->
+        <section class="tool active" id="tool-unit">
+            <h2>Unit Converter</h2>
+            <div class="tool-in">
+                <label class="field">
+                    <span class="f-label">Category</span>
+                    <select id="uc-cat">
+                        <option value="length">Length</option>
+                        <option value="mass">Mass</option>
+                        <option value="pressure">Pressure</option>
+                        <option value="volume">Volume</option>
+                        <option value="energy">Energy</option>
+                        <option value="temperature">Temperature</option>
+                    </select>
+                </label>
+                <label class="field">
+                    <span class="f-label">Value</span>
+                    <input id="uc-value" type="number" value="1" step="any" inputmode="decimal">
+                </label>
+                <label class="field">
+                    <span class="f-label">From</span>
+                    <select id="uc-from"></select>
+                </label>
+                <label class="field">
+                    <span class="f-label">To</span>
+                    <select id="uc-to"></select>
+                </label>
+            </div>
+            <div class="result">
+                <div class="r-value" id="uc-out">1</div>
+                <div class="r-unit" id="uc-out-unit">Meter</div>
+            </div>
+        </section>
+
+        <!-- BOLT TORQUE -->
+        <section class="tool" id="tool-torque">
+            <h2>Bolt Torque</h2>
+            <p class="formula">T = K &middot; F &middot; d &nbsp;(preload torque)</p>
+            <div class="tool-in">
+                <label class="field">
+                    <span class="f-label">Nut factor K</span>
+                    <select id="bt-k">
+                        <option value="0.10">0.10 — Lubricated / plated</option>
+                        <option value="0.15">0.15 — Waxed</option>
+                        <option value="0.20" selected>0.20 — As-received steel</option>
+                        <option value="0.25">0.25 — Zinc plated</option>
+                        <option value="0.30">0.30 — Rusty / dry</option>
+                    </select>
+                </label>
+                <label class="field">
+                    <span class="f-label">Clamping force F</span>
+                    <input id="bt-f" type="number" value="10" step="any" inputmode="decimal"><span class="suffix">kN</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Nominal diameter d</span>
+                    <input id="bt-d" type="number" value="12" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+            </div>
+            <div class="result">
+                <div class="r-value" id="bt-out">24.0</div>
+                <div class="r-unit" id="bt-out-unit">N&middot;m (and equivalents below)</div>
+            </div>
+        </section>
+
+        <!-- BEAM DEFLECTION -->
+        <section class="tool" id="tool-beam">
+            <h2>Beam Deflection — Simply Supported</h2>
+            <p class="formula">&delta; = W&middot;L&sup3; &frasl; (48&middot;E&middot;I), &nbsp;M = W&middot;L&frasl;4</p>
+            <div class="tool-in">
+                <label class="field">
+                    <span class="f-label">Mid-span point load W</span>
+                    <input id="bd-w" type="number" value="1000" step="any" inputmode="decimal"><span class="suffix">N</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Span L</span>
+                    <input id="bd-l" type="number" value="1000" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Section width b</span>
+                    <input id="bd-b" type="number" value="50" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Section height h</span>
+                    <input id="bd-h" type="number" value="100" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Modulus E (steel 200, Al 69)</span>
+                    <input id="bd-e" type="number" value="200" step="any" inputmode="decimal"><span class="suffix">GPa</span>
+                </label>
+            </div>
+            <div class="result">
+                <div class="r-value" id="bd-out">0.05</div>
+                <div class="r-unit" id="bd-out-unit">mm deflection at mid-span</div>
+            </div>
+        </section>
+
+        <!-- CYLINDER / PIPE VOLUME -->
+        <section class="tool" id="tool-volume">
+            <h2>Cylinder / Pipe Volume</h2>
+            <p class="formula">V = &pi;&middot;r&sup2;&middot;L &nbsp;or&nbsp; &pi;&middot;(r<sub>o</sub>&sup2;&minus;r<sub>i</sub>&sup2;)&middot;L</p>
+            <div class="tool-in">
+                <label class="field">
+                    <span class="f-label">Section</span>
+                    <select id="cv-mode">
+                        <option value="cyl">Solid cylinder</option>
+                        <option value="pipe">Hollow pipe</option>
+                    </select>
+                </label>
+                <label class="field" id="cv-r-wrap">
+                    <span class="f-label">Radius r</span>
+                    <input id="cv-r" type="number" value="25" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field" id="cv-od-wrap" style="display:none">
+                    <span class="f-label">Outer diameter OD</span>
+                    <input id="cv-od" type="number" value="50" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field" id="cv-id-wrap" style="display:none">
+                    <span class="f-label">Inner diameter ID</span>
+                    <input id="cv-id" type="number" value="42" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Length L</span>
+                    <input id="cv-l" type="number" value="500" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Material density (steel 7850)</span>
+                    <input id="cv-d" type="number" value="7850" step="any" inputmode="decimal"><span class="suffix">kg/m&sup3;</span>
+                </label>
+            </div>
+            <div class="result">
+                <div class="r-value" id="cv-out">0.982</div>
+                <div class="r-unit" id="cv-out-unit">litres &nbsp;&middot;&nbsp; mass below</div>
+            </div>
+        </section>
+
+        <!-- HOOP STRESS -->
+        <section class="tool" id="tool-hoop">
+            <h2>Hoop Stress — Thin-Walled Vessel</h2>
+            <p class="formula">&sigma;<sub>hoop</sub> = P&middot;D&frasl;(2t), &nbsp;&sigma;<sub>long</sub> = P&middot;D&frasl;(4t)</p>
+            <div class="tool-in">
+                <label class="field">
+                    <span class="f-label">Internal pressure P</span>
+                    <input id="hs-p" type="number" value="1.0" step="any" inputmode="decimal"><span class="suffix">MPa</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Inner diameter D</span>
+                    <input id="hs-d" type="number" value="1000" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Wall thickness t</span>
+                    <input id="hs-t" type="number" value="10" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+            </div>
+            <div class="result">
+                <div class="r-value" id="hs-out">50.0</div>
+                <div class="r-unit" id="hs-out-unit">MPa hoop stress</div>
+            </div>
+        </section>
+
+        <!-- AXIAL STRESS -->
+        <section class="tool" id="tool-axial">
+            <h2>Axial Stress & Safety Factor</h2>
+            <p class="formula">&sigma; = F &frasl; A, &nbsp;SF = &sigma;<sub>yield</sub> &frasl; &sigma;</p>
+            <div class="tool-in">
+                <label class="field">
+                    <span class="f-label">Tensile force F</span>
+                    <input id="as-f" type="number" value="20" step="any" inputmode="decimal"><span class="suffix">kN</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Section</span>
+                    <select id="as-shape">
+                        <option value="round">Round bar</option>
+                        <option value="rect">Rectangular</option>
+                    </select>
+                </label>
+                <label class="field">
+                    <span class="f-label">Diameter d</span>
+                    <input id="as-d" type="number" value="20" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field" id="as-r-wrap" style="display:none">
+                    <span class="f-label">Width b</span>
+                    <input id="as-b" type="number" value="40" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field" id="as-h-wrap" style="display:none">
+                    <span class="f-label">Thickness h</span>
+                    <input id="as-h" type="number" value="8" step="any" inputmode="decimal"><span class="suffix">mm</span>
+                </label>
+                <label class="field">
+                    <span class="f-label">Yield strength (S235 235, S275 275)</span>
+                    <input id="as-y" type="number" value="250" step="any" inputmode="decimal"><span class="suffix">MPa</span>
+                </label>
+            </div>
+            <div class="result">
+                <div class="r-value" id="as-out">63.7</div>
+                <div class="r-unit" id="as-out-unit">MPa &nbsp;&middot;&nbsp; safety factor below</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Billy Ubil &middot; Engineering Calculator &middot; hand-coded, runs 100% in your browser</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
