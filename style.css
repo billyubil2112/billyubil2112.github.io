@@ -120,7 +120,7 @@ section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; position: relati
 .hero-photo {
     position: absolute;
     inset: 0;
-    background: url('utm-header.jpg') center 30%/cover no-repeat;
+    background: url('utm-header-v2.jpg') center 30%/cover no-repeat;
     opacity: 1;
     transition: opacity 0.8s ease;
     will-change: opacity;
@@ -205,7 +205,7 @@ body.scrolled .hero-photo { opacity: 0; }
     z-index: 0;
     background:
         linear-gradient(rgba(10, 14, 23, 0.92), rgba(10, 14, 23, 0.72) 40%, rgba(10, 14, 23, 0.95)),
-        url('utm-projects.jpg') center 40%/cover no-repeat;
+        url('utm-projects-v2.jpg') center 40%/cover no-repeat;
     opacity: 0;
     transition: opacity 1s ease;
     will-change: opacity;
