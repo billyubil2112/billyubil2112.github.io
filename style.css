@@ -199,12 +199,14 @@ body.scrolled .hero-photo { opacity: 0; }
 /* Projects */
 .projects-section { max-width: none; width: 100%; margin: 0; }
 .projects-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.projects-inner .section-header { padding: 30px 0 70px; }
 .projects-bg {
     position: absolute;
-    inset: 0;
+    top: 0; left: 0; right: 0;
+    height: clamp(360px, 48vh, 540px);
     z-index: 0;
     background:
-        linear-gradient(rgba(10, 14, 23, 0.92), rgba(10, 14, 23, 0.72) 40%, rgba(10, 14, 23, 0.95)),
+        linear-gradient(180deg, rgba(11, 14, 20, 0.96), rgba(11, 14, 20, 0.55) 55%, rgba(11, 14, 20, 0) 100%),
         url('utm-projects-v2.jpg') center 40%/cover no-repeat;
     opacity: 0;
     transition: opacity 1s ease;
