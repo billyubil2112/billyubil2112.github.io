@@ -92,6 +92,27 @@ nav {
 .linkedin-btn { background: #0a66c2; border-color: #0a66c2; color: white; }
 .linkedin-btn:hover { background: #004182; border-color: #004182; }
 
+/* Transparent Buttons (Hero) */
+.hero-buttons { 
+    display: flex; 
+    flex-direction: row; 
+    gap: 15px; 
+}
+.btn.transparent {
+    background-color: rgba(126, 166, 212, 0.12);
+    border: 1px solid rgba(126, 166, 212, 0.4); 
+    color: #E6E9EF; 
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+.btn.transparent:hover {
+    background-color: rgba(126, 166, 212, 0.35); 
+    border-color: #7EA6D4; 
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(126, 166, 212, 0.2);
+    transform: translateY(-2px);
+}
+
 /* Layouts */
 section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; position: relative; content-visibility: auto; contain-intrinsic-size: auto 600px; }
 .section-header { margin-bottom: 50px; text-align: center; }
@@ -156,7 +177,6 @@ body.scrolled .hero-photo { opacity: 0; }
     padding: 8px 14px;
     margin-bottom: 22px;
 }
-.hero-buttons { display: flex; gap: 15px; }
 
 /* Stats strip */
 .stats-strip {
@@ -260,8 +280,11 @@ footer { text-align: center; padding: 30px; border-top: 1px solid var(--border);
     .nav-links li { padding: 14px 0; border-bottom: 1px solid var(--border); }
     .hero h1 { font-size: 3rem; }
     .hero h2 { font-size: 1.4rem; }
-    .hero-buttons { flex-direction: column; }
-    .btn { text-align: center; width: 100%; }
+    
+    /* Modified for phone: keeps buttons side-by-side, shrinks text to fit */
+    .hero-buttons { flex-direction: row; gap: 8px; justify-content: flex-start; }
+    .btn { padding: 10px 14px; font-size: 0.85rem; text-align: center; }
+    
     .stats-strip { grid-template-columns: 1fr; margin-top: -20px; }
     section { padding-top: 80px; }
     .hero { padding: 0 6%; }
@@ -271,7 +294,6 @@ footer { text-align: center; padding: 30px; border-top: 1px solid var(--border);
     .hero h2 { font-size: 1.15rem; margin-bottom: 14px; line-height: 1.4; }
     .hero p { font-size: 0.95rem; }
     .spec { font-size: 0.7rem; letter-spacing: 0.1em; padding: 7px 12px; line-height: 1.8; margin-bottom: 18px; }
-    .hero-buttons { gap: 12px; }
 }
 
 @media (max-width: 420px) {
@@ -281,7 +303,10 @@ footer { text-align: center; padding: 30px; border-top: 1px solid var(--border);
     .hero h2 { font-size: 1.02rem; }
     .hero p { font-size: 0.9rem; }
     .spec { font-size: 0.66rem; }
-    .hero-buttons { gap: 10px; }
+    
+    /* Extra tight spacing for very narrow screens */
+    .hero-buttons { gap: 6px; }
+    .btn { padding: 8px 10px; font-size: 0.75rem; }
 }
 
 /* Animations */
